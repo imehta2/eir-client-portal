@@ -54,3 +54,55 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model IndustryProject {
+  id                   Int       @id @default(autoincrement())
+  projectTitle         String
+  commitHours          String
+  companyName          String
+  website              String?
+  contactPerson        String
+  primaryPhoneNumber   String
+  mobileNumber         String?
+  bestTimesToContact   String
+  email                String
+  businessAddress      String
+  city                 String
+  state                String
+  zip                  String
+  country              String
+  description          String
+  isRRCStudent         Boolean
+  rrcProgram           String?
+  isNorthForge         Boolean
+  northForgeProgram    String?
+  isIndigenousOwned    Boolean
+  indigenousFocus      Boolean
+  businessIdea         String
+  serviceDescription   String
+  strategicPriorities  String
+  problemToSolve       String
+  valueProposition     String
+  successMetrics       String
+  customerBenefits     String
+  impactOfOpportunity  String
+  customers            String
+  currentMarketing     String
+  deliveryMethod       String
+  adoptionApproach     String
+  keyUsers             String
+  alternativeUsage     String
+  businessCase         String?
+  appliedForGrant      Boolean
+  grantDetails         String?
+  studentFunding       Boolean
+  fundingAmount        String?
+  receiveInfo          Boolean
+  anticipatedLength    String
+  featureSet           String
+  technologyEnvironment String
+  studentEnticement    String
+  learningOutcomes     String
+  additionalComments   String?
+}
+
