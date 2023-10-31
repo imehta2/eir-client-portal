@@ -10,14 +10,14 @@ export default function LoginPage() {
     router.push('/api/auth/signin/email');
   };
 
-  // Check if the user is already authenticated, and redirect them to welcome.tsx
-  if (session) {
-    router.push('/welcome');
-  }
-
   return (
-    <div>
-      <button onClick={handleSignIn}>Sign In</button>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <div className="text-center mb-4">
+        <p>You need to sign in to use the following website.</p>
+      </div>
+      <button onClick={handleSignIn} className="bg-blue-500 text-white font-semibold py-2 px-4 rounded">
+        Sign In
+      </button>
     </div>
   );
 }
