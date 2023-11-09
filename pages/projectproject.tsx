@@ -27,213 +27,219 @@ const ProjectProject: React.FC = () => {
         });
     }
   }, [id, session]);
-  
+
   return (
     <div>
       <Navbar />
-      <div className="container mx-auto p-5">
+      <div className="container mx-auto p-5 flex flex-wrap">
         {projectDetails ? (
-          <div className="bg-gray p-4 shadow-md rounded-md mx-auto w-3/4">
-            <h1 className="text-2xl font-extrabold mb-4 text-center bounce">
+          <div className="sticky top-0 self-start max-w-sm ml-8">
+            <h1 className="text-3xl font-extrabold mb-6 font-serif text-center animate-fade-in">
               {projectDetails.projectTitle}
             </h1>
-            <table className="w-full border-collapse text-sm">
-              <tbody>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Company Name:</td>
-                  <td className="p-2">{projectDetails.companyName}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Website:</td>
-                  <td className="p-2">{projectDetails.website}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Contact Person:</td>
-                  <td className="p-2">{projectDetails.contactPerson}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Email:</td>
-                  <td className="p-2">{projectDetails.email}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Primary Phone Number:</td>
-                  <td className="p-2">{projectDetails.primaryPhoneNumber}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Mobile Number:</td>
-                  <td className="p-2">{projectDetails.mobileNumber}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Best Times To Contact:</td>
-                  <td className="p-2">{projectDetails.bestTimesToContact}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Hours Commited:</td>
-                  <td className="p-2">{projectDetails.commitHours}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Business Address:</td>
-                  <td className="p-2">{projectDetails.businessAddress}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">City:</td>
-                  <td className="p-2">{projectDetails.city}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">State:</td>
-                  <td className="p-2">{projectDetails.state}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Zip:</td>
-                  <td className="p-2">{projectDetails.zip}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Country:</td>
-                  <td className="p-2">{projectDetails.country}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Description:</td>
-                  <td className="p-2">{projectDetails.description}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">RRC student:</td>
-                  <td className="p-2">{projectDetails.isRRCStudent ? 'Yes' : 'No'}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">RRC Program:</td>
-                  <td className="p-2">{projectDetails.rrcProgram }</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Description:</td>
-                  <td className="p-2">{projectDetails.description}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">North Forge:</td>
-                  <td className="p-2">{projectDetails.isNorthForge ? 'Yes' : 'No'}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">North Forge Program:</td>
-                  <td className="p-2">{projectDetails.northForgeProgram}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Is Indigenous Owned:</td>
-                  <td className="p-2">{projectDetails.isIndigenousOwned ? 'Yes' : 'No'}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Indigenous Focused:</td>
-                  <td className="p-2">{projectDetails.indigenousFocus ? 'Yes' : 'No'}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Business Idea:</td>
-                  <td className="p-2">{projectDetails.businessIdea}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Service Description:</td>
-                  <td className="p-2">{projectDetails.serviceDescription}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Strategic Priorities:</td>
-                  <td className="p-2">{projectDetails.strategicPriorities}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Problem To Solve:</td>
-                  <td className="p-2">{projectDetails.problemToSolve}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Value Proposition:</td>
-                  <td className="p-2">{projectDetails.valueProposition}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Success Metrics:</td>
-                  <td className="p-2">{projectDetails.successMetrics}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Customer Benefits:</td>
-                  <td className="p-2">{projectDetails.customerBenefits}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Impact Of Opportunity:</td>
-                  <td className="p-2">{projectDetails.impactOfOpportunity}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Customers:</td>
-                  <td className="p-2">{projectDetails.customers}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Current Marketing:</td>
-                  <td className="p-2">{projectDetails.currentMarketing}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Delivery Method:</td>
-                  <td className="p-2">{projectDetails.deliveryMethod}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Adoption Approach:</td>
-                  <td className="p-2">{projectDetails.adoptionApproach}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Key Users:</td>
-                  <td className="p-2">{projectDetails.keyUsers}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Alternative Usage:</td>
-                  <td className="p-2">{projectDetails.alternativeUsage}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Business Case:</td>
-                  <td className="p-2">{projectDetails.businessCase}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Applied For Grant:</td>
-                  <td className="p-2">{projectDetails.appliedForGrant ? 'Yes' : 'No'}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Grant Details:</td>
-                  <td className="p-2">{projectDetails.grantDetails}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Student Funding:</td>
-                  <td className="p-2">{projectDetails.studentFunding ? 'Yes' : 'No'}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Funding Amount:</td>
-                  <td className="p-2">{projectDetails.fundingAmount}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Receive Information:</td>
-                  <td className="p-2">{projectDetails.receiveInfo}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Anticipated Length:</td>
-                  <td className="p-2">{projectDetails.anticipatedLength}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Feature Set:</td>
-                  <td className="p-2">{projectDetails.featureSet}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Technology Environment:</td>
-                  <td className="p-2">{projectDetails.technologyEnvironment}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Student Enticement:</td>
-                  <td className="p-2">{projectDetails.studentEnticement}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Learning Outcomes:</td>
-                  <td className="p-2">{projectDetails.learningOutcomes}</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="font-bold p-2">Additional Comments:</td>
-                  <td className="p-2">{projectDetails.additionalComments}</td>
-                </tr>
-                
-              </tbody>
-            </table>
+            <section className="mb-16">
+            <section className="mb-4">
+              <h2 className="text-xl font-bold mb-2 bg-red-700 text-white">Company</h2>
+              <p className="text-xl">
+                {projectDetails.companyName}
+              </p>
+              <p className="text-blue">
+              <a href={projectDetails.website} target="_blank" rel="noopener noreferrer">
+                  {projectDetails.website}
+                  </a>
+              </p>
+              </section>
+              <section className="mb-4">
+              <h2 className="text-l font-bold mb-2 bg-gray-400 text-white">Business Address</h2>
+              <p>
+                 {projectDetails.businessAddress}
+              </p>
+              <p>
+                 {projectDetails.city}
+              </p>
+              <p>
+                 {projectDetails.state}
+              </p>
+              <p>
+                 {projectDetails.country}
+              </p>
+              <p>
+                 {projectDetails.zip}
+              </p>
+            </section>
+            <section className="mb-4">
+              <h2 className="text-l font-bold mb-2 bg-gray-400 text-white">Contact Person</h2>
+              <p>
+                {projectDetails.contactPerson}
+              </p>
+              <p>
+                <a href={`mailto:${projectDetails.email}`}>{projectDetails.email}</a>
+              </p>
+
+              <p>
+                {projectDetails.primaryPhoneNumber}
+              </p>
+              <p>
+                {projectDetails.mobileNumber}
+              </p>
+              <p>
+                <span className="font-bold italic text-gray-500">Best Times To Contact:</span> {projectDetails.bestTimesToContact}
+              </p>
+              <p>
+                <span className="font-bold italic text-gray-500">Hours Committed:</span> {projectDetails.commitHours}
+              </p>
+              </section>
+              </section>
+              <section className="mb-4">
+              <h2 className="text-l font-bold mb-2 bg-red-700 text-white">Course Info (If College student)</h2>
+              <table className="invisible-table">
+    <tbody>
+      <tr>
+        <td className="font-bold italic text-gray-500">RRC Student:</td>
+        <td>{projectDetails.isRRCStudent ? 'Yes' : 'No'}</td>
+      </tr>
+      <tr>
+        <td className="font-bold italic text-gray-500">RRC Program:</td>
+        <td>{projectDetails.rrcProgram}</td>
+      </tr>
+      <tr>
+        <td className="font-bold italic text-gray-500">North Forge:</td>
+        <td>{projectDetails.isNorthForge ? 'Yes' : 'No'}</td>
+      </tr>
+      <tr>
+        <td className="font-bold italic text-gray-500">North Forge Program:</td>
+        <td>{projectDetails.northForgeProgram}</td>
+      </tr>
+      <tr>
+        <td className="font-bold italic text-gray-500">Is Indigenous Owned:</td>
+        <td>{projectDetails.isIndigenousOwned ? 'Yes' : 'No'}</td>
+      </tr>
+      <tr>
+        <td className="font-bold italic text-gray-500">Indigenous Focused:</td>
+        <td>{projectDetails.indigenousFocus ? 'Yes' : 'No'}</td>
+      </tr>
+    </tbody>
+  </table>
+            </section>
+            <section className="mb-4">
+              <h2 className="text-l font-bold mb-2 bg-red-700 text-white">Student Funding</h2>
+              <p className="font-bold">
+              {projectDetails.studentFunding ? 'Yes' : 'No'}
+              </p>
+              <p>
+                <span className="font-bold italic text-gray-500">Funding Amount:</span> {projectDetails.fundingAmount}
+              </p>
+            </section>
+            <section className="mb-4">
+              <h2 className="text-l font-bold mb-2 bg-red-700 text-white">Anticipated Length</h2>
+              <p className="font-bold">{projectDetails.anticipatedLength}</p>
+            </section>
           </div>
         ) : (
           <div className="text-center py-4">
             <p className="text-lg">Loading project details...</p>
+          </div>
+        )}
+
+        {projectDetails && (
+          <div className="bg-gray p-4 shadow-md rounded-md w-2/3 ml-4">
+            
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Description</h2>
+              <p>{projectDetails.description}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Business Idea</h2>
+              <p>{projectDetails.businessIdea}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Service Description</h2>
+              <p>{projectDetails.serviceDescription}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Strategic Priorities</h2>
+              <p>{projectDetails.strategicPriorities}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Problem To Solve</h2>
+              <p>{projectDetails.problemToSolve}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Value Proposition</h2>
+              <p>{projectDetails.valueProposition}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Success Metrics</h2>
+              <p>{projectDetails.successMetrics}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Customer Benefits</h2>
+              <p>{projectDetails.customerBenefits}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Impact Of Opportunity:</h2>
+              <p>{projectDetails.impactOfOpportunity}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Customers</h2>
+              <p>{projectDetails.customers}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Marketing</h2>
+              <p>{projectDetails.currentMarketing}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Delivery Method</h2>
+              <p>{projectDetails.deliveryMethod}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Adoption Approach</h2>
+              <p>{projectDetails.adoptionApproach}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Key Users</h2>
+              <p>{projectDetails.keyUsers}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Alternative Usage</h2>
+              <p>{projectDetails.alternativeUsage}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Business Case</h2>
+              <p>{projectDetails.businessCase}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Applied For Grant:</h2>
+              <p>{projectDetails.appliedForGrant ? 'Yes' : 'No'}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Grant Details</h2>
+              <p>{projectDetails.grantDetails}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Receive Information</h2>
+              <p>{projectDetails.receiveInfo}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Feature Set</h2>
+              <p>{projectDetails.featureSet}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Technology Environment</h2>
+              <p>{projectDetails.technologyEnvironment}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Student Enticement</h2>
+              <p>{projectDetails.studentEnticement}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Learning Outcomes</h2>
+              <p>{projectDetails.learningOutcomes}</p>
+            </section>
+            <section className="mb-6">
+              <h2 className="text-xl font-bold mb-2">Additional Comments</h2>
+              <p>{projectDetails.additionalComments}</p>
+            </section>
           </div>
         )}
       </div>

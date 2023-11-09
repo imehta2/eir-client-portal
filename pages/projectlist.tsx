@@ -35,7 +35,7 @@ const ProjectList: React.FC = () => {
       <Navbar />
       {session && (
         <div>
-          <h1>List of Industry Projects</h1>
+          <h1 className="bg-red-700 text-white p-2">List of Industry Projects</h1>
           <table className="project-list">
             <thead>
               <tr>

@@ -56,7 +56,7 @@ export default NextAuth({
     async redirect(params) {
       // Redirect logic here
       if (params.url === params.baseUrl) {
-        return "/welcome.tsx";
+        return "/welcome";
       }
       return params.url;
     },
