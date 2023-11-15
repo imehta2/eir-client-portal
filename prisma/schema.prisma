@@ -104,5 +104,6 @@ model IndustryProject {
   studentEnticement    String
   learningOutcomes     String
   additionalComments   String?
+  dateCreated          DateTime? @default(now())
 }
 
